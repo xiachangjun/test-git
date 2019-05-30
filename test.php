@@ -10,3 +10,6 @@ echo 1;
 
 echo "about echo 109349874897272";
 
+function(){
+    
+}
