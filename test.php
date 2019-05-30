@@ -7,4 +7,4 @@
  */
 
 echo 1;
-echo "about echo 1";
+echo "about echo 2";
