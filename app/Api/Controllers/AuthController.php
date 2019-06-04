@@ -39,10 +39,10 @@ class AuthController extends  BaseController
         return response()->json(compact('token'));
     }
 
-    public  function register(Request $request){
+    public function register(Request $request){
 
         $newUser=[
-            'email'=>$request->get('get'),
+            'email'=>$request->get('email'),
             'name'=>$request->get('name'),
             'password'=>bcrypt($request->get('password'))
 
