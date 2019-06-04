@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'XcxController@index');
 //Route::resource('project','PostsController');
 //Route::get('/user/register','UsersController@register');
 //Route::post('/user/register','UsersController@store');
@@ -19,13 +19,17 @@ Route::get('/', 'PostsController@index');
 //
 Route::get('index','NewprojectController@testdb');
 Route::get('/login', 'UserController@login')->name('login');
-
+//Route::get('xcx_index',"XcxController@index");
+Route::group(['prefix'=>'xcx'],function (){
+    Route::get('index','XcxController@index');
+    Route::get('test','XcxController@test');
+});
 //Route::group(['prefix'=>'api/v1'],function (){
 //
 //    Route::resource('lessons','LessonsController');
 //});
 //
-//Auth::routes();
+Auth::routes();
 //
 //Route::get('/home', 'HomeController@index')->name('home');
 
