@@ -21,6 +21,6 @@ class XcxController extends Controller
         return view('xcx.index');
     }
     public  function test(){
-        return 123;
+        return 1234;
     }
 }
