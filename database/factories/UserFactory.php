@@ -46,3 +46,9 @@ $factory->define(App\Lesson::class, function (Faker $faker) {
 
     ];
 });
+$factory->define(App\Wxuser::class, function (Faker $faker) {
+
+    return [
+        'openid'=> $faker->md5,
+    ];
+});

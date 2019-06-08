@@ -13,7 +13,7 @@ class XcxController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
 
     public function index(){
@@ -21,6 +21,6 @@ class XcxController extends Controller
         return view('xcx.index');
     }
     public  function test(){
-        return 12345;
+         phpinfo();
     }
 }

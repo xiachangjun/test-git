@@ -18,12 +18,12 @@ use Faker\Generator as Faker;
 
 
 
-$factory->define(\App\project::class, function (Faker $faker) {
-    $user_ids=User::pluck('id')->toArray();
-    return [
-        'title' => $faker->sentence,
-        'body' => $faker->paragraph,
-        'user_id'=>$faker->randomElement($user_ids),
-        'last_user_id'=>$faker->randomElement($user_ids),
-    ];
-});
+//$factory->define(\App\project::class, function (Faker $faker) {
+//    $user_ids=User::pluck('id')->toArray();
+//    return [
+//        'title' => $faker->sentence,
+//        'body' => $faker->paragraph,
+//        'user_id'=>$faker->randomElement($user_ids),
+//        'last_user_id'=>$faker->randomElement($user_ids),
+//    ];
+//});
