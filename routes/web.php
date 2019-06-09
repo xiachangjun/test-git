@@ -39,13 +39,15 @@ $api->version('v1',function ($api){
 
     $api->group(['namespace'=>'App\Api\Controllers'],function ($api){
 
-           $api->post('user/login','AuthController@authenticate');
-        $api->post('user/register','AuthController@register');
+            $api->post('user/login','AuthController@authenticate');
+            $api->post('user/register','AuthController@register');
+            $api->get('wxapi/register','WxapiController@register');
+            //身份认证 需要token
+            $api->group(['middleware'=>'jwt.auth'],function ($api){
+                $api->get('user/me','AuthController@getAuthenticatedUser');
+                $api->get('lessons','LessonsController@index');
+                $api->get('lessons/{id}','LessonsController@show');
 
-       $api->group(['middleware'=>'jwt.auth'],function ($api){
-           $api->get('user/me','AuthController@getAuthenticatedUser');
-           $api->get('lessons','LessonsController@index');
-           $api->get('lessons/{id}','LessonsController@show');
 
        });
     });

@@ -38,7 +38,7 @@ class AuthController extends  BaseController
         // all good so return the token
         return response()->json(compact('token'));
     }
-    //登陆 传入openid
+
     public function register(Request $request){
 
         $newUser=[
